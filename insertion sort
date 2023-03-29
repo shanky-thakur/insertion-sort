@@ -1,0 +1,37 @@
+// importing required libraries
+import java.util.Arrays;
+
+// Main class
+public class Main{
+    
+    // main method
+    public static void main(String[] args){
+        
+        // array initialization
+        int[] arr = {12,56,34,566,78,87,89};
+        
+        // print array to check references
+        System.out.println(Arrays.toString(arr));
+        
+        // traversing array indeces
+        for(int i=0; i<arr.length-1; i++){
+            
+            //traversing values
+            for(int j=1; j<arr.length-i; j++){
+                
+                // placing the element in ascending order
+                while(arr[j]<arr[j-1]){
+                    
+                    // swap elements
+                    int temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                }
+                
+            }
+        }
+        
+        // printing array top check algorithm
+        System.out.println(Arrays.toString(arr));
+    }
+}
